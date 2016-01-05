@@ -20,9 +20,9 @@
 *
 */
 
-
+#include <Wire.h>
 #include <LiquidCrystal.h>
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 
 /*Display buffer:
 *  index 0-19 for characters left to right
